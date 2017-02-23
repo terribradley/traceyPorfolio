@@ -10,10 +10,18 @@
     <header>
       <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
       <nav>
-        <ul>
+        <?php
+          $defaults = array(
+            'container' => false,
+            'theme_location' =>'primary-menu',
+            'menu_class' => 'top-nav'
+          );
+          wp_nav_menu($defaults);
+          ?>
+        <!-- <ul>
           <li>Work</li>
           <li>About</li>
           <li>Contact</li>
-        </ul>
+        </ul> -->
       </nav>
     </header>
