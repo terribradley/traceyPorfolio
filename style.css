@@ -30,23 +30,45 @@ li {
 
 /***************Main Page Style - Portfolio***************/
 .page-title {
-  height: 65vh;
-  background-color: red;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-page-title h1 {
+.page-title h1 {
  color: #DC502B;
 }
 
-content-page {
+.content-page {
   background-color: white;
-  width: 90%;
-  margin: 0 5%;
-  padding: 2% 10%;
+  width: 89%;
+  margin: 0 auto;
+  /*padding: 2% 10%;*/
+  display: flex;
+  flex-direction: column;
+}
+.content-page-title {
+  display: flex;
+  border-bottom: 1px solid grey;
+  margin: 5%;
+}
+.content-page-title h1 {
+  margin: auto 10% 5% 0;
+}
+
+.gallery {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2% 4%;
+}
+.gallery-image {
+  margin: 10px;
+}
+
+footer {
+  margin: 5%;
+  border-top: 1px solid grey;
 }
