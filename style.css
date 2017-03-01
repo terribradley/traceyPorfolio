@@ -5,9 +5,48 @@ Author URI: terrilbradley.com
 Description: A unique beautiful theme, ideal for artist portfolios that are showing images, video, and sound work.
 Tags: Purple, white, responsive, unique
 */
+
 body {
-  background-color: red;
+background-color: #13035C;
 }
-header {
-  background-color: green;
+
+.top-nav {
+  display: flex;
+  background-color: blue;
+  justify-content: flex-end;
+}
+li {
+  list-style-type: none;
+  margin: 0 5%;
+}
+.top-nav li a {
+  text-decoration: none;
+  color: white;
+}
+.top-nav li a:hover {
+  text-decoration: underline;
+}
+
+
+/***************Main Page Style - Portfolio***************/
+.page-title {
+  height: 65vh;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+page-title h1 {
+ color: #DC502B;
+}
+
+content-page {
+  background-color: white;
+  width: 90%;
+  margin: 0 5%;
+  padding: 2% 10%;
+  display: flex;
+  justify-content: space-around;
 }

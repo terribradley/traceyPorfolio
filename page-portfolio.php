@@ -1,43 +1,45 @@
 <?php
-// Template Name: Porfolio Page
+// Template Name: Portfolio Page
 ?>
 
 <?php get_header(); ?>
+<section class="page-title">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<section class="banner">
-  <h1> <?php the_title(); ?> </h1>
-</section>
-<section class="content">
-  <div class="content-title">
-    <h2>Tracy Cockrell</h2>  <h2> <?php the_title(); ?> </h2>
-  </div>
-  <hr>
-  <div class="content-body">
+    <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>
-  </div>
-</section>
-<?php endwhile; endif; ?>
 
+  <?php endwhile; endif; ?>
+
+
+
+</section>
 
 <?php
+
   $args = array(
-    'post_type' => 'portfolio'
+    'post_type' => 'portfolio',
   );
-  $the_query = new WP_Query( $args );
- ?>
+  $query = new WP_Query( $args );
 
- <?php if( $the_query -> have_post() ) : while( $the_query->have_posts() ) : $the_query -> the_post(); ?>
-
-   <div class="gallery">
-     <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('large');?> </a>
-   </div>
-
-   <p>post</p>
-
-<?php endwhile; endif; wp_reset_postdata();  ?>
+?>
 
 
+<section class="content-page">
+  <div class="content-page-title">
+      <h1><?php the_author()?></h1><h1><?php the_title(); ?></h1>
+
+  </div>
+
+  <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+
+  <div>
+    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+  </div>
+
+  <?php endwhile; endif; wp_reset_postdata(); ?>
+
+</section>
 
 
 <?php get_footer(); ?>
