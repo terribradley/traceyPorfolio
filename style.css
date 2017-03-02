@@ -7,7 +7,8 @@ Tags: Purple, white, responsive, unique
 */
 
 body {
-background-color: #13035C;
+background-image: url('img/bluebird2.png');
+background-position: center;
 }
 /**********************static-front-page*/
 .front-page-title {
@@ -17,11 +18,29 @@ background-color: #13035C;
 }
 .front-page-title h1 {
   text-decoration: none;
-  font-size: 7em;
-  margin-top: 18%;
+  font-size: 15em;
+  margin-top: 10%;
   color: #DC502B;
+  -webkit-font-smoothing: antialiased;
 }
 
+.marquee {
+    width: 124%;
+    margin: 0 auto;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 17s linear infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { transform: translate( 100%, 0);}
+    100% { transform: translate( -100%, 0); }
+}
 
 /**********************nav*/
 
@@ -98,4 +117,30 @@ li {
 footer {
   margin: 5%;
   border-top: 1px solid grey;
+}
+
+/***************Main Page Style - Portfolio Piece***************/
+
+.content-page .two-columns{
+  display: flex;
+  margin: 2% 4%;
+}
+.primary {
+  width: 65%;
+}
+.gallery p {
+  margin: 0;
+}
+
+.gallery p img {
+  margin: 20px;
+}
+.secondary {
+  width: 31%;
+  border-left: 1px solid grey;
+  padding-left: 3%;
+}
+
+.portfolio-piece .content-page .content-page-title {
+  margin: 5% 5% 1% 5%;
 }
