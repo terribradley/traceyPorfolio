@@ -1,26 +1,37 @@
 
-<!-- Template Name: Artist Info-->
+<?php
+// Template Name: Artist Info
+?>
 
 <?php get_header(); ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<section class="banner">
-  <h1> <?php the_title(); ?> </h1>
-</section>
-<section class="content">
-  <div class="content-title">
-    <h2>Tracy Cockrell</h2>  <h2> <?php the_title(); ?> </h2>
-  </div>
-  <hr>
-  <div class="content-body">
-    <p> <?php the_content(); ?> </p>
-  </div>
+<section class="page-title">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+    <h1><?php the_title(); ?></h1>
+
+  <?php endwhile; endif; ?>
 </section>
 
+<?php
 
-<?php endwhile; else : ?>
+  $args = array(
+    'post_type' => 'artist_info',
+  );
+  $query = new WP_Query( $args );
 
-<?php endif; ?>
+?>
+
+
+<section class="content-page">
+  <div class="content-page-title">
+      <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>-----<h1><?php the_title(); ?></h1>
+  </div>
+  <p><?php the_field('biography'); ?></p>
+
+
+
 
 
 <?php get_footer(); ?>
+</section>
