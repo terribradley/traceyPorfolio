@@ -4,11 +4,10 @@
 <section class="banner">
   <h1> <?php the_title(); ?> </h1>
 </section>
-<section class="content">
-  <div class="content-title">
-    <h2>Tracy Cockrell</h2>  <h2> <?php the_title(); ?> </h2>
+<section class="conten-paget">
+  <div class="content-page-title">
+      <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>-----</h1><h1><?php the_title(); ?></h1>
   </div>
-  <hr>
   <div class="content-body">
     <p> <?php the_content(); ?> </p>
   </div>

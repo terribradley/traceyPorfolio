@@ -1,10 +1,12 @@
 <?php
 
 add_theme_support('menus');
+add_theme_support('post-thumbnails');
 function register_theme_menus() {
   register_nav_menus(
     array(
-      'primary-menu' => ('Primary Menu')
+      'primary-menu' => ('Primary Menu'),
+      'social-links' => ('Social Links')
     )
   );
 }
@@ -12,7 +14,7 @@ add_action('init', 'register_theme_menus');
 
 
 function wpt_theme_styles() {
-  wp_enqueue_style('normalize_css', get_template_directory_uri() . '/css/normalize.css');
+  // wp_enqueue_style('normalize_css', get_template_directory_uri() . '/css/normalize.css');
 
   wp_enqueue_style('main_css', get_template_directory_uri() . '/style.css');
 }

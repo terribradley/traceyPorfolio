@@ -11,13 +11,18 @@
 
 <section class="content-page">
   <div class="content-page-title">
-    <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>-----<h1><a href="<?php bloginfo('url'); ?>/works">Works</a></h1>
+    <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>-----</h1><a id="two" href="<?php bloginfo('url'); ?>/works">Work</a>
   </div>
   <div class="two-columns">
     <!-- Primary Column -->
     <div class="primary">
       <div class="gallery">
-        <?php the_field('images'); ?>
+        <?php
+          $image = get_field('image');
+            if( !empty($image) ): ?>
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+        <?php endif; ?>
       </div>
       <div class="audio">
         <h1>Listen</h1>
@@ -26,7 +31,7 @@
       </div>
       <div class="video">
         <h1>View</h1>
-        <?php the_field('video'); ?>
+        <?php the_field('wyswyg'); ?>
 
       </div>
     </div>
@@ -39,7 +44,7 @@
       <p><?php the_field('description'); ?></p>
 
       <p>
-        <?php previous_post_link(); ?><?php next_post_link(); ?>
+        <?php previous_post_link(); ?> • <?php next_post_link(); ?>
       </p>
 
     </div>
