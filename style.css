@@ -185,3 +185,18 @@ footer {
 .portfolio-piece .content-page .content-page-title {
   margin: 5% 5% 1% 5%;
 }
+
+/* *************footer******************* */
+
+footer .social-links {
+  display: flex;
+  margin: 2% 38%;
+  justify-content: space-around;
+}
+.tsl-default.tsl-facebook, .tsl-default.tsl-instagram, .tsl-default.tsl-linkedin, .tsl-default.tsl-twitter {
+  background: #382a71;
+}
+
+a.tsl-default:hover {
+  background: #dd4f2b;
+}
