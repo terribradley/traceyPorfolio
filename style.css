@@ -10,7 +10,7 @@ Tags: Purple, white, responsive, unique
 
 
 body {
-background-image: url('img/bluebird2.png');
+background-image: url('img/bluebird2.jpg');
 background-position: center;
 }
 /**********************static-front-page*/
@@ -47,13 +47,14 @@ background-position: center;
 }
 
 /**********************nav*/
-
-nav h1 a {
-  text-decoration: none;
-  color: white;
-  margin: 5%;
-  font-family: 'Neuton', serif;
-  padding-bottom: 3px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 2% 0 12%;
+}
+nav img {
+  margin: 3% 0 0 5%;
+  width: 68%;
 }
 nav h1 a:hover {
   border-bottom: 1px solid white;
@@ -61,10 +62,11 @@ nav h1 a:hover {
 .top-nav {
   display: flex;
   justify-content: flex-end;
+  margin-top: 5%;
 }
 li {
   list-style-type: none;
-  margin: 0 5%;
+  margin: 0 50%;
 }
 .top-nav li a {
   text-decoration: none;
@@ -103,6 +105,10 @@ li {
   flex-direction: column;
   border-radius: 3px;
 }
+.content-page .content-body {
+  max-height: 2000px;
+  overflow: scroll;
+}
 .content-page-title {
   display: flex;
   border-bottom: 1px solid grey;
@@ -125,27 +131,15 @@ li {
   letter-spacing: 5px;
   font-weight: 400;
 }
-
-.gallery {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  /* margin: 2% 4%; */
-}
-.gallery-image {
-  margin: 10px;
-}
-.gallery-image a {
-  width: 100%;
-  height: 250px;
+.content-body {
+  width: 87%;
+  margin: 0 auto;
 }
 
-footer {
-  margin: 5%;
-  border-top: 1px solid grey;
-}
 
-/***************Main Page Style - Portfolio Piece***************/
+
+
+/***************Page Style - Portfolio Piece***************/
 .portfolio-piece .content-page-title h1 a {
   color: #616161;
   text-decoration: none;
@@ -169,10 +163,22 @@ footer {
 .primary {
   width: 65%;
 }
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* margin: 2% 4%; */
+}
+.gallery-image {
+  margin: 10px;
+}
+.gallery-image a {
+  width: 100%;
+  height: 250px;
+}
 .gallery p {
   margin: 0;
 }
-
 .gallery p img {
   margin: 20px;
 }
@@ -186,7 +192,32 @@ footer {
   margin: 5% 5% 1% 5%;
 }
 
+/* ***************Page style - artist Info*********** */
+.content-page .cv-artist-info {
+  max-height: 1600px;
+  overflow: scroll;
+}
+
+.artist-info{
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+}
+.biography-artist-info, .cv-artist-info {
+  width: 45%;
+  margin: 0 auto;
+}
+.biography-artist-info img {
+  width: 60%;
+  float: left;
+  margin: 4% 5% 4% 0;
+}
 /* *************footer******************* */
+footer {
+  margin: 5%;
+  border-top: 1px solid grey;
+}
 
 footer .social-links {
   display: flex;

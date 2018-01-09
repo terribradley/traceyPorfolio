@@ -7,12 +7,8 @@
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <h1><?php the_title(); ?></h1>
-    <?php the_content(); ?>
 
   <?php endwhile; endif; ?>
-
-
-
 </section>
 
 <?php
@@ -27,19 +23,20 @@
 
 <section class="content-page">
   <div class="content-page-title">
-      <h1><?php the_author()?></h1><h1><?php the_title(); ?></h1>
-
+      <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1><img src="img/line.png" alt="line"><h1><?php the_title(); ?></h1>
   </div>
 
-  <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 
-  <div>
-    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+  <div class="gallery">
+    <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+
+      <div class="gallery-image">
+        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+      </div>
+
+    <?php endwhile; endif; wp_reset_postdata(); ?>
   </div>
 
-  <?php endwhile; endif; wp_reset_postdata(); ?>
+  <?php get_footer(); ?>
 
 </section>
-
-
-<?php get_footer(); ?>

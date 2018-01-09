@@ -17,22 +17,7 @@
     <!-- Primary Column -->
     <div class="primary">
       <div class="gallery">
-        <?php
-          $image = get_field('image');
-            if( !empty($image) ): ?>
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-        <?php endif; ?>
-      </div>
-      <div class="audio">
-        <h1>Listen</h1>
-          <?php the_field('sound'); ?>
-
-      </div>
-      <div class="video">
-        <h1>View</h1>
-        <?php the_field('wyswyg'); ?>
-
+        <?php the_field('gallery'); ?>
       </div>
     </div>
 

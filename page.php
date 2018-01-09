@@ -7,15 +7,14 @@
 
 </section>
 
-<section class="content-page">
+<section class="content-page basic-page">
   <div class="content-page-title">
-    <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>-----<h1><?php the_title(); ?></h1>
+    <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1><img src="img/line.png" alt="line"><h1><?php the_title(); ?></h1>
   </div>
   <hr>
   <div class="content-body">
     <p> <?php the_content(); ?> </p>
   </div>
-</section>
 
 
 <?php endwhile; else : ?>
@@ -24,3 +23,4 @@
 
 
 <?php get_footer(); ?>
+</section>

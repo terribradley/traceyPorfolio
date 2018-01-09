@@ -1,6 +1,6 @@
 
 <?php
-// Template Name: Artist Info
+// Template Name: Artist Info Page
 ?>
 
 <?php get_header(); ?>
@@ -25,18 +25,23 @@
 
 <section class="content-page">
   <div class="content-page-title">
-      <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>-----<h1><?php the_title(); ?></h1>
+      <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1><img src="img/line.png" alt="line"><h1><?php the_title(); ?></h1>
   </div>
 
   <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+    <section class="artist-info">
+      <div class="biography-artist-info">
+        <img src="<?php the_field('picture'); ?>" alt="">
+        <p><?php the_field('biography'); ?></p>
+        <h2>Statement</h2>
+        <p><?php the_field('artist_statement'); ?></p>
+      </div>
+      <div class="cv-artist-info">
+        <h2>CV</h2>
+        <p><?php the_field('curriculum_vitae')?></p>
+      </div>
 
-    <div class="biography-artist-info">
-      <img src="<?php the_field('picture'); ?>" alt="">
-      <p><?php the_field('biography'); ?></p>
-    </div>
-    <div class="cv-artist-info">
-      <p><?php the_field('curriculum_vitae')?></p>
-    </div>
+    </section>
 
   <?php endwhile; endif; wp_reset_postdata(); ?>
 
