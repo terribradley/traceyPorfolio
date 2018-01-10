@@ -11,12 +11,16 @@
 
 <section class="content-page">
   <div class="content-page-title">
-    <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>-----</h1><a id="two" href="<?php bloginfo('url'); ?>/works">Work</a>
+    <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+
+    <img class="single" src="<?php bloginfo('template_directory'); ?>/img/line.png" alt="alt text" />
+
+    <h1><a id="two" href="<?php bloginfo('url'); ?>">Work</a></h1>
   </div>
   <div class="two-columns">
     <!-- Primary Column -->
     <div class="primary">
-      <div class="gallery">
+      <div class="single-gallery">
         <?php the_field('gallery'); ?>
       </div>
     </div>

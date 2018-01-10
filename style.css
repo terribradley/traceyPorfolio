@@ -12,6 +12,7 @@ Tags: Purple, white, responsive, unique
 body {
 background-image: url('img/bluebird2.jpg');
 background-position: center;
+background-attachment: fixed;
 }
 /**********************static-front-page*/
 .front-page-title {
@@ -36,15 +37,15 @@ background-position: center;
     animation: marquee 17s linear infinite;
 }
 
-.marquee:hover {
+/* .marquee:hover {
     animation-play-state: paused
-}
+} */
 
 /* Make it move */
-@keyframes marquee {
+/* @keyframes marquee {
     0%   { transform: translate( 100%, 0);}
     100% { transform: translate( -100%, 0); }
-}
+} */
 
 /**********************nav*/
 nav {
@@ -114,6 +115,15 @@ li {
   border-bottom: 1px solid grey;
   margin: 5%;
 }
+.content-page-title img {
+  height: 1px;
+  margin: 1.5% 20px auto 15px;
+}
+.content-page-title img.single {
+  height: 1px;
+  margin: 1% 20px 1.5% 15px;
+}
+
 .content-page-title h1 {
   margin: auto .4% 6% 0;
   font-family: 'Neuton', serif;
@@ -162,6 +172,7 @@ li {
 }
 .primary {
   width: 65%;
+  padding: 0 2%;
 }
 .gallery {
   display: flex;
@@ -193,7 +204,7 @@ li {
 }
 
 /* ***************Page style - artist Info*********** */
-.content-page .cv-artist-info {
+.content-page .cv-artist-info-content {
   max-height: 1600px;
   overflow: scroll;
 }

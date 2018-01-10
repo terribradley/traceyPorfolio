@@ -10,7 +10,7 @@
     <header>
       <nav>
         <a href="<?php bloginfo('url'); ?>">
-          <img src='wp-content/themes/tracey-portfolio/img/home_icon2.png' alt="home icon">
+          <img src="<?php bloginfo('template_directory'); ?>/img/home_icon2.png" alt="alt text" />
         </a>
         <?php
           $defaults = array(

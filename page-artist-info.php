@@ -25,7 +25,7 @@
 
 <section class="content-page">
   <div class="content-page-title">
-      <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1><img src="img/line.png" alt="line"><h1><?php the_title(); ?></h1>
+      <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1><img src="<?php bloginfo('template_directory'); ?>/img/line.png" alt="alt text" /><h1><?php the_title(); ?></h1>
   </div>
 
   <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
@@ -38,7 +38,9 @@
       </div>
       <div class="cv-artist-info">
         <h2>CV</h2>
-        <p><?php the_field('curriculum_vitae')?></p>
+        <div class="cv-artist-info-content">
+          <p><?php the_field('curriculum_vitae')?></p>
+        </div>
       </div>
 
     </section>
