@@ -6,11 +6,11 @@ Description: A unique beautiful theme, ideal for artist portfolios that are show
 Tags: Purple, white, responsive, unique
 */
 
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text:700|Neuton:300');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700|Roboto+Condensed');
 
 
 body {
-background-image: url('img/bluebird2.jpg');
+background-image: url('img/bluebird2.png');
 background-position: center;
 background-attachment: fixed;
 }
@@ -22,10 +22,11 @@ background-attachment: fixed;
 }
 .front-page-title h1 {
   text-decoration: none;
-  font-size: 15em;
-  margin-top: 10%;
+  font-size: 7em;
+  margin: 10%;
   color: #DC502B;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -35,6 +36,13 @@ background-attachment: fixed;
     white-space: nowrap;
     box-sizing: border-box;
     animation: marquee 17s linear infinite;
+}
+
+@media (max-width: 500px) {
+  .front-page-title h1 {
+    font-size: 2.4em;
+    margin-top: 23%;
+  }
 }
 
 /* .marquee:hover {
@@ -73,11 +81,24 @@ li {
   text-decoration: none;
   color: white;
   font-size: 1.2em;
-  font-family: 'Neuton', serif;
+  font-family: 'Roboto Condensed', sans-serif;
   padding-bottom: 3px;
 }
 .top-nav li a:hover {
   border-bottom: 1px solid white;
+}
+@media (max-width: 500px) {
+    nav {
+      margin: 20% 2% 0 12%;
+    }
+    nav img {
+      margin: 3% 0 0 0%;
+      width: 60%;
+    }
+    li {
+      margin: 0 12%;
+    }
+
 }
 
 
@@ -92,10 +113,12 @@ li {
 .page-title h1 {
   position: fixed;
   color: #DC502B;
-  font-size: 6em;
+  font-size: 5em;
+  margin-top: 11%;
   position: fixed;
   z-index: -100;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
 }
 
 .content-page {
@@ -126,14 +149,14 @@ li {
 
 .content-page-title h1 {
   margin: auto .4% 6% 0;
-  font-family: 'Neuton', serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .content-page-title h1 a {
   color: #616161;
   text-decoration: none;
   letter-spacing: 5px;
   font-weight: 400;
-  font-family: 'Neuton', serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .content-page-title h1 a:visited {
   color: #616161;
@@ -146,6 +169,33 @@ li {
   margin: 0 auto;
 }
 
+@media (max-width: 500px) {
+  .page-title {
+    height: 25vh;
+  }
+  .page-title h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .content-page {
+    width: 97%;
+  }
+  .content-page-title {
+    justify-content: center;
+  }
+  .content-page-title h1 {
+    font-size: 1.3em;
+  }
+  .content-page-title h1 a {
+    font-size: .8em;
+    letter-spacing: 3px;
+  }
+  .content-page-title img {
+    margin: 4% 10px auto 4px;
+  }
+
+}
+
 
 
 
@@ -156,14 +206,14 @@ li {
   letter-spacing: 5px;
   font-weight: 400;
   font-size: 1.25em;
-  font-family: 'Neuton', serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .portfolio-piece .content-page-title a {
   color: black;
   text-decoration: none;
   font-weight: 400;
   font-size: 1.5em;
-  font-family: 'Neuton', serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .content-page .two-columns{
@@ -198,9 +248,41 @@ li {
   border-left: 1px solid grey;
   padding-left: 3%;
 }
-
 .portfolio-piece .content-page .content-page-title {
   margin: 5% 5% 1% 5%;
+}
+.secondary p, .secondary h2  {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+@media (max-width: 500px) {
+  .gallery-image {
+    margin: 0;
+  }
+  .portfolio-piece .content-page-title h1 a {
+    font-size: 1em;
+    letter-spacing: 3px;
+  }
+  .portfolio-piece .content-page-title a {
+      font-size: 1em;
+  }
+  .content-page img.single {
+    margin: 3.5% 10px auto 4px;
+  }
+  .content-page .two-columns {
+    flex-direction: column;
+  }
+  .primary {
+    width: 95%;
+    padding: 5% 2.5%;
+  }
+  .secondary {
+    width: 90%;
+    border-top: 1px solid grey;
+    padding: 3%;
+    border-left: none;
+    text-align: center;
+  }
 }
 
 /* ***************Page style - artist Info*********** */
@@ -209,11 +291,14 @@ li {
   overflow: scroll;
 }
 
-.artist-info{
+.artist-info {
   display: flex;
   justify-content: space-around;
   width: 90%;
   margin: 0 auto;
+}
+.artist-info p, .artist-info h2 {
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .biography-artist-info, .cv-artist-info {
   width: 45%;
@@ -224,6 +309,17 @@ li {
   float: left;
   margin: 4% 5% 4% 0;
 }
+
+@media (max-width: 500px) {
+  .artist-info {
+    flex-direction: column
+  }
+  .biography-artist-info, .cv-artist-info {
+    width: 95%;
+  }
+
+}
+
 /* *************footer******************* */
 footer {
   margin: 5%;
@@ -241,4 +337,34 @@ footer .social-links {
 
 a.tsl-default:hover {
   background: #dd4f2b;
+}
+
+@media (max-width: 500px) {
+  footer .social-links{
+    margin: 9% 31%;
+  }
+}
+/* ************lightbox*************** */
+
+@media (max-width: 1500px) {
+  .eg-everest-lightbox-overlay.eg-black-lightbox .eg-everest-lightbox-wrap {
+    border-radius: 0px;
+    box-shadow: inset 0px 1px 4px black;
+    width: 75%;
+  }
+  .eg-everest-lightbox-wrap img {
+    width: 100%;
+  }
+  .eg-everest-lightbox-overlay .eg-everest-lightbox-wrap {
+    width: 75%;
+  }
+
+}
+/* **************contact form****************** */
+div.wpforms-container-full .wpforms-form .wpforms-title {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.wpforms-container {
+  font-family: 'Roboto Condensed', sans-serif;
 }
