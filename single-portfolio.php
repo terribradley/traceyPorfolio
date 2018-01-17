@@ -15,7 +15,7 @@
 
     <img class="single" src="<?php bloginfo('template_directory'); ?>/img/line.png" alt="alt text" />
 
-    <h1><a id="two" href="<?php bloginfo('url'); ?>">Work</a></h1>
+    <h1><a id="two" href="http://www.traceycockrell.com/works/; ?>">Work</a></h1>
   </div>
   <div class="two-columns">
     <!-- Primary Column -->
@@ -32,7 +32,7 @@
       <h2><?php the_title(); ?></h2>
       <p><?php the_field('description'); ?></p>
 
-      <p>
+      <p class="next">
         <?php previous_post_link(); ?> • <?php next_post_link(); ?>
       </p>
 
