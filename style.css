@@ -101,7 +101,7 @@ margin: 0;
 nav {
   display: flex;
   justify-content: space-between;
-  margin: 2% 2% 0 12%;
+  margin: 4% 9% 0 10%
 }
 nav img {
   margin: 3% 0 0 5%;
@@ -110,7 +110,7 @@ nav img {
 .top-nav {
   display: flex;
   justify-content: flex-end;
-  margin-top: 5%;
+  margin-top: 6%;
   width: 15%;
 }
 li {
@@ -159,11 +159,27 @@ li {
     margin-top: 10%;
   }
 }
+@media only screen and (min-width: 2400px) {
+  nav {
+    margin: 7% 20% 0 20%;
+  }
+  nav img {
+    margin: 0;
+    width: 163%;
+  }
+  .top-nav {
+    margin-top: 8.5%;
+    width: 12%;
+  }
+  .top-nav li a {
+    font-size: 3em;
+  }
+}
 
 
 /***************Main Page Style - Portfolio***************/
 .page-title {
-  height: 60vh;
+  height: 58vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,7 +188,7 @@ li {
   position: fixed;
   color: #DC502B;
   font-size: 5em;
-  margin-top: 11%;
+  margin-top: 9%;
   position: fixed;
   z-index: -100;
   font-family: 'Libre Baskerville', serif;
@@ -197,6 +213,7 @@ li {
 }
 .content-page-title img {
   height: 1px;
+  width: 100px;
   margin: 1.5% 20px auto 15px;
 }
 .content-page-title img.single {
@@ -205,13 +222,15 @@ li {
 }
 .content-page-title h1 {
   margin: auto .4% 6% 0;
+  letter-spacing: 3px;
   font-family: 'Roboto Condensed', sans-serif;
 }
 .content-page-title h1 a {
   color: #616161;
   text-decoration: none;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   font-weight: 400;
+  font-size: 1em;
   font-family: 'Roboto Condensed', sans-serif;
 }
 .content-page-title h1 a:visited {
@@ -250,6 +269,7 @@ li {
   }
   .content-page-title img {
     margin: 4% 10px auto 4px;
+    width: 40px;
   }
 }
 @media only screen and (max-width: 830px) and (min-width: 501px) {
@@ -260,24 +280,37 @@ li {
     margin: 2% 20px auto 15px;
   }
 }
-
-
+@media only screen and (min-width: 2400px) {
+  .page-title {
+    height: 47vh;
+  }
+  .content-page {
+    width: 70%;
+  }
+  .content-page-title h1 {
+    font-size: 3em;
+    margin: auto .4% 5% 0;
+  }
+  .content-page-title img {
+    width: 180px;
+    margin: 1.5% 55px auto 55px;
+  }
+}
 
 
 /***************Page Style - Portfolio Piece***************/
 .portfolio-piece .content-page-title h1 a {
   color: #616161;
   text-decoration: none;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   font-weight: 400;
   font-size: 1.25em;
   font-family: 'Roboto Condensed', sans-serif;
 }
-.portfolio-piece .content-page-title a {
+.portfolio-piece .content-page-title h1 {
   color: black;
   text-decoration: none;
   font-weight: 400;
-  font-size: 1.5em;
   font-family: 'Roboto Condensed', sans-serif;
 }
 .portfolio-piece .content-page-title h1 a#two {
@@ -322,6 +355,7 @@ li {
   text-decoration: none;
   color: black;
   display: inline-block;
+  margin-top: 10%;
 }
 .secondary p {
   width: fit-content;
@@ -339,6 +373,9 @@ li {
 }
 .secondary p a:hover:after {
   transform: scaleX(1);
+}
+.secondary p .next {
+  margin-top: 10%;
 }
 .portfolio-piece .content-page .content-page-title {
   margin: 5% 5% 1% 5%;
@@ -388,6 +425,7 @@ li {
   }
   .portfolio-piece .page-title {
     text-align: center;
+    margin: 0 12%;
   }
   .portfolio-piece .content-page .two-columns {
     margin: 4% 4%;
@@ -402,8 +440,29 @@ li {
   .content-page img.single {
     margin: 2% 20px auto 15px;
   }
-
 }
+@media only screen and (min-width: 2400px) {
+  .primary {
+    width: 80%;
+  }
+  .portfolio-piece .content-page .two-columns {
+    margin: 2% 12%;
+  }
+  .portfolio-piece .content-page .two-columns .primary .single-gallery .eg-grid-wrap.eg-column-1 .eg-each-item, .eg-masonary-wrap.eg-column-1 .eg-each-item {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1%;
+  }
+  .portfolio-piece .content-page-title h1  {
+    font-size: 2.5em;
+  }
+  .content-page img.single {
+    margin: 2% 55px 1.5% 55px;
+  }
+}
+
+
 
 /* ***************Page style - artist Info*********** */
 .content-page .cv-artist-info-content {
@@ -449,6 +508,7 @@ li {
     margin: 4% 3% 1% 0px;
   }
 }
+
 
 /* **************links************ */
 .artist-links {
